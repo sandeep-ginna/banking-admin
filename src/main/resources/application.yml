@@ -1,0 +1,34 @@
+
+spring:
+    datasource:
+        driverClassName: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/bankadb
+        username: banka
+        password: banka
+        idleMaxAgeInMinutes: 240
+        idleConnectionTestPeriodInMinutes: 60
+        maxConnectionsPerPartition: 1000
+        minConnectionsPerPartition: 1
+        partitionCount: 2
+        acquireIncrement: 5
+        statementsCacheSize: 100
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+        hibernate:
+            ddl-auto: create
+            naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    main:
+        allow-circular-references: true
+        allow-bean-definition-overriding: true
+
+
+
+
+
+
+
+
+
